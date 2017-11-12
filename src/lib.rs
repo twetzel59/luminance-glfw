@@ -54,8 +54,8 @@ pub struct GLFWDevice {
 }
 
 impl GLFWDevice {
-  fn lib_handle(&self) -> &Window {
-    self.handle()
+  pub fn lib_handle(&self) -> &Window {
+    &self.window
   }
 }
 
