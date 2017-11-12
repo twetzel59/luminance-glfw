@@ -53,6 +53,12 @@ pub struct GLFWDevice {
   events: Receiver<(f64, WindowEvent)>
 }
 
+impl GLFWDevice {
+  fn lib_handle(&self) -> &Window {
+    self.handle()
+  }
+}
+
 impl Device for GLFWDevice {
   type Event = WindowEvent;
   type Error = GLFWDeviceError;
