@@ -57,6 +57,10 @@ impl GLFWDevice {
   pub fn lib_handle(&self) -> &Window {
     &self.window
   }
+
+  pub fn lib_handle_mut(&mut self) -> &mut Window {
+    &mut self.window
+  }
 }
 
 impl Device for GLFWDevice {
